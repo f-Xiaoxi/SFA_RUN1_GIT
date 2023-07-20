@@ -11,14 +11,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout private repo remotely
         uses: actions/checkout@v2
-
-      - name: Build project
+        with:
+          repository: ${{ secrets.private_repo_path }}
+          path: /
+          token: ${{ secrets.repo_token }}
+      - name: Show hidden files
         run: |
-          # Replace the build command below with your actual build command
-          echo "Building the project..."
-          # Your build command goes here
+          cd home/
+          ls
 
-      - name: Print message
-        run: echo "Build completed successfully!"
