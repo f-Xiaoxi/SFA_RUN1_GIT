@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: ${{ secrets.private_repo_path }}
-          path: /
+          path: '/home/runner/work/SFA_RUN1_GIT/SFA_RUN1_GIT'
           token: ${{ secrets.repo_token }}
       - name: Show hidden files
         run: |
